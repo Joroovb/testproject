@@ -2,7 +2,8 @@
     "name": "testproject",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "story": "github:riknoll/arcade-story#v1.3.1"
     },
     "files": [
         "main.blocks",
