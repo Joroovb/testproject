@@ -307,6 +307,9 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     true
     )
 })
+info.onLifeZero(function () {
+    game.splash("game over!")
+})
 let playerSprite: Sprite = null
 scene.setBackgroundImage(img`
     8fffffffffffffffffffffffff88fffff88ffff8998889999999989988888989999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
@@ -450,5 +453,6 @@ playerSprite = sprites.create(img`
     . . . . . f f f f f f . . . . . 
     . . . . . f f . . f f . . . . . 
     `, SpriteKind.Player)
+info.setLife(3)
 controller.moveSprite(playerSprite)
 scene.cameraFollowSprite(playerSprite)
